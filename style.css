@@ -1,0 +1,401 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@font-face {
+  font-family: Nunito;
+  src: url(Nunito-Regular.ttf);
+}
+
+body {
+  font-size: 15pt;
+  font-family: Nunito;
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  background: #FFB5A7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 30px;
+}
+
+.menu {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  min-height: 80vh;
+  flex-direction: column;
+  align-items: center;
+  background: #FCD5CE;
+}
+
+.intro {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+#search-bar {
+  display: flex;
+  position: relative;
+  width: 80%;
+  margin: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 45px;
+}
+
+#search-bar * {
+  font-family: Nunito;
+}
+
+h5 {
+  margin-bottom: 10px;
+}
+
+#new-item {
+  width: 60%;
+  border: none;
+  outline: none;
+  background: #FFB5A7;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+#slabel {
+  position: absolute;
+  top: 10px;
+  left: 43%;
+  font-size: 18px;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+#slabel ul  {
+  display: flex;
+  list-style: none;
+}
+
+#slabel ul li {
+transition: 0.2s ease-in;
+}
+
+
+#new-item:focus+#slabel ul li {
+  opacity: 0;
+}
+
+
+#slabel ul li:nth-child(1) {
+  transition-delay: 0.4s
+}
+
+
+#slabel ul li:nth-child(2){
+
+  transition-delay: 0.3s
+}
+ #slabel ul li:nth-child(3){
+  transition-delay: 0.2s
+}
+
+#slabel ul li:nth-child(4){
+  
+  transition-delay: 0.1s
+}
+
+#slabel ul li:nth-child(5){
+  
+  transition-delay: 0.1s
+}
+
+ #slabel ul li:nth-child(6){
+  transition-delay: 0.2s
+}
+
+#slabel ul li:nth-child(7){
+  transition-delay: 0.3s
+}
+
+#slabel ul li:nth-child(8){
+ 
+  transition-delay: 0.4s
+}
+
+#new-item:focus+#slabel ul li:nth-child(1), #new-item:valid+#slabel ul li:nth-child(1) {
+  transform: translateX(-150px);
+  transition-delay: 0s
+}
+
+#new-item:focus + #slabel ul li:nth-child(2),  #new-item:valid+#slabel ul li:nth-child(2) {
+  transform: translateX(-150px);
+  transition-delay: 0.1s
+}
+
+#new-item:focus + #slabel ul li:nth-child(3),  #new-item:valid+#slabel ul li:nth-child(3) {
+  transform: translateX(-150px);
+  transition-delay: 0.2s
+}
+
+#new-item:focus + #slabel ul li:nth-child(4),  #new-item:valid+#slabel ul li:nth-child(4) {
+  transform: translateX(-150px);
+  transition-delay: 0.3s
+}
+
+#new-item:focus + #slabel ul li:nth-child(5),  #new-item:valid+#slabel ul li:nth-child(5) {
+  transform: translateX(150px);
+  transition-delay: 0.3s
+}
+
+#new-item:focus + #slabel ul li:nth-child(6),  #new-item:valid+#slabel ul li:nth-child(6) {
+  transform: translateX(150px);
+  transition-delay: 0.2s
+}
+
+#new-item:focus + #slabel ul li:nth-child(7),  #new-item:valid+#slabel ul li:nth-child(7) {
+  transform: translateX(150px);
+  transition-delay: 0.1s
+}
+
+#new-item:focus + #slabel ul li:nth-child(8),  #new-item:valid+#slabel ul li:nth-child(8) {
+  transform: translateX(150px);
+  transition-delay: 0s
+}
+#add-btn {
+  border: none;
+  width: 15%;
+  background: #FFB5A7;
+  padding: 10px;
+  margin: 0px;
+  border-left: 3px solid #FCD5CE;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  width: 25%;
+  background: #FFB5A7;
+  padding: 10px;
+  margin: 0px;
+  border-left: 3px solid #FCD5CE;
+  text-align: center;
+  outline: none;
+}
+
+#list {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  width: 80%;
+  min-height: 200px;
+  background: #FFB5A7;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  width: 90%;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 0 40px;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  background: #FCD5CE;
+  overflow: hidden;
+  max-height: 44px
+}
+
+.item-check {
+  position: absolute;
+  opacity: 0;
+}
+
+.cancel {
+  position: absolute;
+  padding-top: 5px;
+  transition: 1s ease;
+
+  color: transparent;
+  background: #FFB5A7;
+  width: 105%;
+  height: 120%;
+  pointer-events: none;
+  transform: translateX(-110%);
+  backdrop-filter: opacity(1) blur(1px);
+  filter: opacity(0.8) blur(1px);
+  z-index: 3;
+
+}
+
+.cancel::befoe {
+  position: absolute;
+  content: "__________";
+  padding-top: 5px;
+  transition: 0.6s ease;
+  left: 130%;
+  color: dimgray;
+  width: 105%;
+  height: 120%;
+  pointer-events: none;
+
+
+}
+
+.item-value {
+  transition: 1s ease;
+  z-index: 1;
+}
+
+.item-check:checked+.check-mark {
+
+  opacity: 0.9;
+  fill: gray;
+}
+
+.item-check:checked~.cancel {
+  transform: translateX(-6%);
+}
+
+.check-mark {
+  position: relative;
+  top: 2px;
+  z-index: 5;
+  pointer-events: none;
+  transition: 1s ease;
+}
+
+.del-btn {
+  z-index: 5;
+  transition: 1s ease;
+  position: relative;
+  left: 10px;
+  height: 30px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  fill: red;
+}
+
+.del-btn svg {
+  pointer-events: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 100%;
+  background: #FFB5A7;
+
+}
+
+#credits {
+  text-align: center;
+}
+
+.bubble {
+  position: relative;
+  animation: 0.5s circle ease forwards;
+}
+
+.bubble .cancel {
+  transition: 0.5s ease;
+  transform: translateX(-6%);
+  background: red;
+}
+
+.shake {
+  background: red !important;
+  color: red;
+  animation: 0.5s shake linear;
+}
+
+.shake * {
+  color: red;
+
+}
+
+
+@keyframes circle {
+  0% {
+    clip-path: circle(100%);
+  }
+
+  80% {
+    clip-path: circle(10%);
+    opacity: 0.6;
+  }
+
+  100% {
+    clip-path: circle(10%);
+    opacity: 0;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+
+  25% {
+    left: 10px;
+  }
+
+  50% {
+    left: -10px;
+  }
+
+  60% {
+    left: 20px;
+  }
+
+  75% {
+    left: 15px;
+  }
+
+  100% {
+    top: -100px;
+    left: 15px;
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  20% {
+    transform: translateX(-10%)
+  }
+
+  40% {
+    transform: translateX(10%)
+  }
+
+  60% {
+    transform: translateX(-5%)
+  }
+
+  80% {
+    transform: translateX(5%)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}
