@@ -230,7 +230,7 @@ transition: 0.2s ease-in;
   position: absolute;
   padding-top: 5px;
   transition: 1s ease;
-
+border: none;
   color: transparent;
   background: #FFB5A7;
   width: 105%;
@@ -240,22 +240,10 @@ transition: 0.2s ease-in;
   backdrop-filter: opacity(1) blur(1px);
   filter: opacity(0.8) blur(1px);
   z-index: 3;
+  outline: none;
 
 }
 
-.cancel::befoe {
-  position: absolute;
-  content: "__________";
-  padding-top: 5px;
-  transition: 0.6s ease;
-  left: 130%;
-  color: dimgray;
-  width: 105%;
-  height: 120%;
-  pointer-events: none;
-
-
-}
 
 .item-value {
   transition: 1s ease;
