@@ -234,7 +234,7 @@ transition: 0.2s ease-in;
   color: transparent;
   background: #FFB5A7;
   width: 105%;
-  height: 120%;
+  height: 170%;
   pointer-events: none;
   transform: translateX(-110%);
   backdrop-filter: opacity(1) blur(1px);
@@ -325,11 +325,12 @@ footer {
   background: red !important;
   color: red;
   animation: 0.5s shake linear;
+  transition: 0.1 ease 0.1s;
 }
 
 .shake * {
-  color: red;
-
+  color: rd;
+  
 }
 
 
